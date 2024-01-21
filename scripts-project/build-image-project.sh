@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Default project software versions
-nextcloud_version="25.0.3"
+nextcloud_version="28.0.1"
 
 # Script directory
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -14,10 +14,10 @@ helpMessage()
   echo "build-image-project.sh: Use packer to build project images for deployment"
   echo ""
   echo "Help: build-image-project.sh"
-  echo "Usage: ./build-image-project.sh -m -n hostname -g grav_version -v version"
+  echo "Usage: ./build-image-project.sh -n hostname -v version -r false"
   echo "Flags:"
   echo -e "-n hostname \t\t(Mandatory) Name of the host for which to build images"
-  echo -e "-v version \t\t(Mandatory) Version stamp to apply to images, e.g. 20210101-1"
+  echo -e "-v version \t\t(Mandatory) Version stamp to apply to images, e.g. $nextcloud_version"
   echo -e "-r remote_build \t\t(Mandatory) Whether to build images on the remote LXD host (true/false)"
   echo -e "-h \t\t\tPrint this help message"
   echo ""
